@@ -6,4 +6,5 @@ root.geometry("500x250")    # устанавливаем размеры окна
 
 # new comments
 
+# another comment
 root.mainloop()
