@@ -1,14 +1,26 @@
-from tkinter import *
-windows = Tk()     # создаем корневой объект - окно
-windows.title("Calculator")     # устанавливаем заголовок окна
-windows.geometry("500x650")    # устанавливаем размеры окна
+import tkinter as tk
 
-label_out = Label(
-    text = "0",
-    font=("Arial", 44),
-    fg="black",
-    bg="snow3"
-)
-label_out.pack(anchor=N, padx=5,pady=5, side=RIGHT)
+LARGE_FONT_STYLE = ("Arial", 40,"bold")
+SMALL_FONT_STYLE = ("Arial", 16)
+DIGITS_FONT_STYLE = ("Arial", 24,"bold")
+DEFAULT_FONT_STYLE = ( "Arial",20)
 
-windows.mainloop()
+OFF_WHITE = "#F8FAFF"
+WHITE = "#FFFFFF#"
+LIGHT_BLUE ="#CCEDFF"
+LIGHT_GRAY  =  "#F5F5F5"
+LABEL_COLOR =  "#25265E"
+
+class Calculator:
+    def __init__(self):
+        self.windows = tk.Tk() #создание окна
+        self.windows.geometry ("350x650") #размер появляемого окна
+        self.windows.resizable(False, False) #отключение параметра изменения размера окна
+        self.windows.title("Calculator_test") #отображается в шапке имя программы
+
+    def start(self):
+        self.windows.mainloop() #обработчик событий для ожидания действий пользователя
+        
+if __name__ == "__main__":
+    vizov = Calculator()
+    vizov.start()
